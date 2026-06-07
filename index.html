@@ -87,9 +87,9 @@
     for (const plat of s.platforms) if (plat.type === 'moving') plat.x = plat.baseX + Math.sin(s.time*1.8 + plat.phase)*52;
 
     let ax = 0;
-    if (keys.has('ArrowLeft') || keys.has('a') || keys.has('A')) ax -= .82;
-    if (keys.has('ArrowRight') || keys.has('d') || keys.has('D')) ax += .82;
-    p.vx = (p.vx + ax) * .92; p.vx = clamp(p.vx, -8.6, 8.6); if (Math.abs(p.vx)>.2) p.facing = Math.sign(p.vx);
+    if (keys.has('ArrowLeft') || keys.has('a') || keys.has('A')) ax -= .42;
+    if (keys.has('ArrowRight') || keys.has('d') || keys.has('D')) ax += .42;
+    p.vx = (p.vx + ax) * .88; p.vx = clamp(p.vx, -5.4, 5.4); if (Math.abs(p.vx)>.2) p.facing = Math.sign(p.vx);
 
     if (p.grounded && p.ground) {
       const g = p.ground;
